@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import styles from "../styles/globals.css";
 import { Navigation } from "./components/navigation";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +15,10 @@ export default function RootLayout({ children }) {
         <title>Spa</title>
       </head>
       <body className={inter.className}>
-        {children}
-        <Navigation />
+        <div className={styles.main}>
+          {children}
+          <Navigation />
+          </div>  
       </body>
     </html>
   );
