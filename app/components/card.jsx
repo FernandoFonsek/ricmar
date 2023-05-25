@@ -1,8 +1,6 @@
-import logo from "../assets/home/home.jpg"
 import Image from 'next/image';
 import styles from "./card.module.css"
 export function Card ({imagen, id, description, name}) {
-    console.log(id)
     return(
         <section key={id} className={styles.card}>
                 <Image
